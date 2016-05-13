@@ -1,0 +1,13 @@
+{
+  "name": "remote-loader-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client-index.js",
+  "author": "Jason McNeal",
+  "license": "ISC",
+  "dependencies": {
+    "md5-file": "*",
+    "socket.io-client": "*",
+    "socket.io-stream": "*"
+  }
+}

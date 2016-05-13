@@ -1,0 +1,6 @@
+node_modules/
+bower_components/
+.tmp/
+setup-internal.gz
+dist/
+.DS_Store

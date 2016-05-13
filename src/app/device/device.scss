@@ -1,0 +1,31 @@
+.container {
+	margin: 20px;
+}
+navbar {
+	display: flex;
+	justify-content: space-between;
+}
+.title {
+	font-size: 28px;
+}
+thead th {
+	text-align: center;
+}
+td {
+	text-align: center;
+}
+.buffer {
+    color: white;
+    padding: 2px;
+    div {
+    	background-color: inherit;
+    	white-space: pre;
+	    overflow: scroll;
+	    max-height: 70px;
+	    width: 200px;
+	    text-align: left;	
+    }
+}
+.bg-grey {
+	background-color: #333333;
+}

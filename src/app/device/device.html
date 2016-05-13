@@ -1,0 +1,44 @@
+<navbar>
+	<div class='title'>Remote Loader</div>
+	<div id='stats' class=''>
+		Server: 
+		<span ng-class="{'text-success': server, 'text-danger': server == 0 }">
+			<i class="fa fa-circle" aria-hidden="true"></i> {{server ? "Online" : "Offline"}}
+		</span>
+		<br/>
+		<span class='text-muted'>Connected: {{deviceCount()}}</span>
+	</div>
+</navbar>
+<div class="table-responsive" ng-if='deviceCount()'>
+<h3>Devices</h3>
+	<table class="table table-hover table-bordered">
+		<thead>
+			<tr>
+				<!-- <th>Device ID</th> -->
+				<th>IP</th>
+				<th>MAC</th>
+				<th>Buffer</th>
+				<th>Status</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat='device in devices'>
+				<!-- <td>{{device.id}}</td> -->
+				<td>{{device.ip}}</td>
+				<td>{{device.mac}}</td>
+				<td class='buffer bg-grey'><div class='buffer'>{{device.buffer}}</div></td>
+				<td>{{device.status}}</td>
+				<td>
+				<button class='btn btn-primary btn-block' ng-click='beginLoad(device.id)'>Start</button>
+				<button class='btn btn-danger btn-block' ng-click='shutdown(device.id)'>Shutdown</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<!-- No Devices -->
+<div class='text-center' ng-if='deviceCount() == 0'>
+	<h2>No Devices Online</h2>
+</div>

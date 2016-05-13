@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="scloader">
+  <head>
+    <meta charset="utf-8"/>
+    <title>scloader</title>
+    <!-- inject:vendor:css -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/device/device.css">
+    <link rel="stylesheet" href="/css/todo/todo.css">
+    <!-- endinject -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+  </head>
+  <body>
+  
+    <section class='main-container'>
+      <ng-view></ng-view>
+    </section>
+  
+  </body>
+    <!-- inject:vendor:js -->
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-route/angular-route.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="/device/device.js"></script>
+    <script src="/device/device-controller.js"></script>
+    <script src="/todo/todo.js"></script>
+    <script src="/todo/todo-controller.js"></script>
+    <script src="/app.js"></script>
+    <script src="/scloader-templates.js"></script>
+    <!-- endinject -->
+    <script src="/socket.io-client/socket.io.js"></script>
+</html>
