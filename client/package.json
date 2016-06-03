@@ -6,7 +6,7 @@
   "author": "Jason McNeal",
   "license": "ISC",
   "dependencies": {
-    "md5-file": "*",
+    "md5-file": "<2.0.5",
     "socket.io-client": "*",
     "socket.io-stream": "*"
   }
