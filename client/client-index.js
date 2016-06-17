@@ -29,7 +29,7 @@ if (fs.existsSync(path+setupFile)) {
     settings.setupHash = md5File(path+setupFile);
 }
 
-var hostServer = 'http://192.168.1.16:4000';
+var hostServer = 'http://192.168.1.168:4000';
 // var hostServer = 'http://localhost:4000';
 var namespace = '/devices';
 // Client
