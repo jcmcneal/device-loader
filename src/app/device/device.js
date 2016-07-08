@@ -2,7 +2,7 @@ angular.module('scloader.device', [])
 
 // Sets up the socket connection and scope config
 .factory('socket', function ($rootScope) {
-  var host = 'localhost';
+  var host = '192.168.1.168';
   var port = '4000';
   var namespace = '/users';
   var socket = io.connect(host+':'+port+namespace);
