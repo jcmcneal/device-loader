@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('scloader.device', [])
 
 // Sets up the socket connection and scope config
@@ -8,7 +10,7 @@ angular.module('scloader.device', [])
   var socket = io.connect(host+':'+port+namespace);
   return {
     on: function (eventName, callback) {
-      socket.on(eventName, function () {  
+      socket.on(eventName, function () {
         var args = arguments;
         $rootScope.$apply(function () {
           callback.apply(socket, args);

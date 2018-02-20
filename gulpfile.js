@@ -63,12 +63,12 @@ gulp.task('styles-dist', ['styles'], function () {
   return cssFiles().pipe(dist('css', bower.name));
 });
 
-gulp.task('csslint', ['styles'], function () {
-  return cssFiles()
-    .pipe(g.cached('csslint'))
-    .pipe(g.csslint('./.csslintrc'))
-    .pipe(g.csslint.reporter());
-});
+// gulp.task('csslint', ['styles'], function () {
+//   return cssFiles()
+//     .pipe(g.cached('csslint'))
+//     .pipe(g.csslint('./.csslintrc'))
+//     .pipe(g.csslint.reporter());
+// });
 
 /**
  * Scripts
@@ -178,12 +178,12 @@ gulp.task('watch', ['statics', 'default'], function () {
 /**
  * Default task
  */
-gulp.task('default', ['lint', 'build-all']);
+gulp.task('default', ['build-all']);
 
 /**
  * Lint everything
  */
-gulp.task('lint', ['jshint', 'csslint']);
+// gulp.task('lint', ['jshint', 'csslint']);
 
 /**
  * Test
